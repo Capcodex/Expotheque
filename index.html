@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Expothèque · InRealArt</title>
+  <meta name="description" content="Expothèque InRealArt — événements d’art et culture en cours et à venir." />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Expothèque <span>InRealArt</span></h1>
+      <p>Agenda des événements d’art & culture — en cours et à venir</p>
+    </div>
+  </header>
+
+  <main class="container" role="main">
+    <section id="search-bar" class="toolbar" aria-label="Filtres">
+      <input id="q" type="search" placeholder="Rechercher un titre, un lieu…" aria-label="Rechercher" autocomplete="off" />
+      <select id="city" aria-label="Filtrer par ville">
+        <option value="">Toutes les villes</option>
+      </select>
+      <button id="reset" type="button">Réinitialiser</button>
+    </section>
+
+    <section id="current" aria-labelledby="h-current">
+      <h2 id="h-current">Événements en cours</h2>
+      <div class="grid" id="current-list" aria-live="polite"></div>
+      <p class="empty" id="current-empty" hidden>Aucun événement en cours.</p>
+    </section>
+
+    <section id="upcoming" aria-labelledby="h-upcoming">
+      <h2 id="h-upcoming">À venir</h2>
+      <div class="grid" id="upcoming-list" aria-live="polite"></div>
+      <p class="empty" id="upcoming-empty" hidden>Aucun événement à venir.</p>
+    </section>
+
+    <noscript>
+      <p class="empty">JavaScript est requis pour charger et afficher les événements.</p>
+    </noscript>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> InRealArt · Expothèque</small>
+    </div>
+  </footer>
+
+  <!-- Script compilé depuis src/main.ts -->
+  <script type="module" src="./dist/main.js"></script>
+</body>
+</html>
